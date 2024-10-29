@@ -6,6 +6,7 @@
     "backBtn": "Back"
   },
   "home": {
+    "home": "Home",
     "darkMode": "🌗 Dark Mode",
     "mockGuide": "💿 Mock Guide",
     "language": "📚 Language",

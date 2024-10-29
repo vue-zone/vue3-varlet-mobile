@@ -6,6 +6,8 @@ definePage({
   name: 'home',
   meta: {
     level: 1,
+    title: '🎨 Unocss 示例',
+    i18n: 'home.home',
   },
 })
 
@@ -56,37 +58,35 @@ const menus = computed(() => ([
 </script>
 
 <template>
-  <Container>
-    <var-paper radius="10" :elevation="2">
-      <var-cell border>
-        {{ t('home.darkMode') }}
-        <template #extra>
-          <var-switch v-model="checked" @click="toggle" />
-        </template>
-      </var-cell>
+  <var-paper radius="10" :elevation="2">
+    <var-cell border>
+      {{ t('home.darkMode') }}
+      <template #extra>
+        <var-switch v-model="checked" @click="toggle" />
+      </template>
+    </var-cell>
 
-      <var-cell ripple border @click="languagePicker">
-        {{ t('home.language') }}
-        <template #extra>
-          <div class="w-80 flex items-center justify-right">
-            <span>{{ language }}</span>
-            <var-icon name="chevron-right" />
-          </div>
-        </template>
-      </var-cell>
-
-      <var-cell
-        v-for="(item, index) in menus"
-        :key="item.router"
-        :border="index !== menus.length - 1"
-        ripple
-        @click="$router.push(item.router)"
-      >
-        {{ item.title }}
-        <template #extra>
+    <var-cell ripple border @click="languagePicker">
+      {{ t('home.language') }}
+      <template #extra>
+        <div class="w-80 flex items-center justify-right">
+          <span>{{ language }}</span>
           <var-icon name="chevron-right" />
-        </template>
-      </var-cell>
-    </var-paper>
-  </Container>
+        </div>
+      </template>
+    </var-cell>
+
+    <var-cell
+      v-for="(item, index) in menus"
+      :key="item.router"
+      :border="index !== menus.length - 1"
+      ripple
+      @click="$router.push(item.router)"
+    >
+      {{ item.title }}
+      <template #extra>
+        <var-icon name="chevron-right" />
+      </template>
+    </var-cell>
+  </var-paper>
 </template>

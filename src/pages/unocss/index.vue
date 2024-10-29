@@ -10,13 +10,11 @@ definePage({
 </script>
 
 <template>
-  <Container>
-    <h1 class="text-6xl color-pink font-semibold">
-      Hello, Unocss!
-    </h1>
+  <h1 class="text-6xl color-pink font-semibold">
+    Hello, Unocss!
+  </h1>
 
-    <p class="mt-4 text-[var(--color-primary)] dark:text-white">
-      This is a simple example of Unocss.
-    </p>
-  </Container>
+  <p class="mt-4 text-[var(--color-primary)] dark:text-white">
+    This is a simple example of Unocss.
+  </p>
 </template>

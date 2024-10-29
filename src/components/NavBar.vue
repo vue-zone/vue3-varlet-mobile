@@ -17,12 +17,16 @@ const title = computed(() => {
 
   return route.meta.i18n ? t(route.meta.i18n) : (route.meta.title || '')
 })
+
+const routeWhiteList = ['home', 'profile']
+
+const showLeftArrow = computed(() => routeWhiteList.includes(route.name as string))
 </script>
 
 <template>
-  <var-app-bar v-show="title" :title="title" :fixed="true" :safe-area-top="true">
+  <var-app-bar v-show="title" :title="title" title-position="center" :fixed="true" :safe-area-top="true" :placeholder="true">
     <template #left>
-      <var-button color="transparent" text-color="#fff" round text @click="onBack">
+      <var-button v-if="!showLeftArrow" color="transparent" text-color="#fff" round text @click="onBack">
         <var-icon name="chevron-left" :size="24" />
       </var-button>
     </template>

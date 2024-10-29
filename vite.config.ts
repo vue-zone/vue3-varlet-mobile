@@ -1,9 +1,9 @@
+import type { ConfigEnv, UserConfig } from 'vite'
 import path from 'node:path'
 import process from 'node:process'
-import { loadEnv } from 'vite'
-import type { ConfigEnv, UserConfig } from 'vite'
-import viewport from 'postcss-mobile-forever'
 import autoprefixer from 'autoprefixer'
+import viewport from 'postcss-mobile-forever'
+import { loadEnv } from 'vite'
 import { createVitePlugins } from './build/vite'
 import { exclude, include } from './build/vite/optimize'
 

@@ -1,6 +1,6 @@
-import { defineStore } from 'pinia'
 import { darkTheme } from '@/styles/dark'
 import { lightTheme } from '@/styles/light'
+import { defineStore } from 'pinia'
 
 export interface AppStore {
   switchMode: (val: string) => void

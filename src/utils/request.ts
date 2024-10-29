@@ -1,8 +1,8 @@
 import type { AxiosError, InternalAxiosRequestConfig } from 'axios'
-import axios from 'axios'
-import { Snackbar } from '@varlet/ui'
-import { localStorage } from '@/utils/local-storage'
 import { STORAGE_TOKEN_KEY } from '@/stores/mutation-type'
+import { localStorage } from '@/utils/local-storage'
+import { Snackbar } from '@varlet/ui'
+import axios from 'axios'
 
 // This is the Token KEY used to set the request backend.
 // You can modify it according to your own needs, such as Access-Token，Authorization

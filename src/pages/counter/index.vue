@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
 import useCounterStore from '@/stores/modules/counter'
+import { storeToRefs } from 'pinia'
 
 definePage({
   name: 'counter',
@@ -20,22 +20,20 @@ function add() {
 </script>
 
 <template>
-  <Container>
-    <h1 class="text-6xl color-pink font-semibold">
-      Hello, Pinia!
-    </h1>
+  <h1 class="text-6xl color-pink font-semibold">
+    Hello, Pinia!
+  </h1>
 
-    <p class="mt-4 text-gray-700 dark:text-white">
-      This is a simple example of persisting Pinia state.
-      To verify its effectiveness, you can refresh the interface and observe it.
-    </p>
+  <p class="mt-4 text-gray-700 dark:text-white">
+    This is a simple example of persisting Pinia state.
+    To verify its effectiveness, you can refresh the interface and observe it.
+  </p>
 
-    <p class="mt-4">
-      number：<strong class="text-green-500"> {{ counter }} </strong>
-    </p>
+  <p class="mt-4">
+    number：<strong class="text-green-500"> {{ counter }} </strong>
+  </p>
 
-    <var-button type="primary" @click="add">
-      Add
-    </var-button>
-  </container>
+  <var-button type="primary" @click="add">
+    Add
+  </var-button>
 </template>

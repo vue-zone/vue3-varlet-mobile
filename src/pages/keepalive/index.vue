@@ -17,11 +17,9 @@ const value = ref(10)
 </script>
 
 <template>
-  <Container>
-    <p>
-      {{ $t('keepAlive.label') }}
-    </p>
+  <p>
+    {{ $t('keepAlive.label') }}
+  </p>
 
-    <var-counter v-model="value" />
-  </Container>
+  <var-counter v-model="value" />
 </template>

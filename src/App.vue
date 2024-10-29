@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
+import useAutoThemeSwitcher from '@/hooks/useAutoThemeSwitcher'
 import useAppStore from '@/stores/modules/app'
 import useRouteCache from '@/stores/modules/routeCache'
-import useRouteTransitionNameStore from '@/stores/modules/routeTransitionName'
-import useAutoThemeSwitcher from '@/hooks/useAutoThemeSwitcher'
 
 useHead({
   title: 'Vue3 Varlet Mobile',
@@ -28,8 +26,6 @@ useHead({
 
 const appStore = useAppStore()
 
-const routeTransitionNameStore = useRouteTransitionNameStore()
-const { routeTransitionName } = storeToRefs(routeTransitionNameStore)
 const { initializeThemeSwitcher } = useAutoThemeSwitcher(appStore)
 
 const keepAliveRouteNames = computed(() => {
@@ -45,12 +41,20 @@ onMounted(() => {
   <app-mobile-detector>
     <NavBar />
     <router-view v-slot="{ Component, route }">
-      <transition :name="routeTransitionName">
+      <section class="app-wrapper">
         <keep-alive :include="keepAliveRouteNames">
           <component :is="Component" :key="route.name" />
         </keep-alive>
-      </transition>
+      </section>
     </router-view>
     <TabBar />
   </app-mobile-detector>
 </template>
+
+<style scoped>
+.app-wrapper {
+  width: 100%;
+  position: relative;
+  padding: 16px;
+}
+</style>

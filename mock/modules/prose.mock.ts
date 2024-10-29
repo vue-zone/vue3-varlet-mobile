@@ -1,6 +1,6 @@
 import { defineMock } from 'vite-plugin-mock-dev-server'
-import { builder } from '../util'
 import proses from '../data'
+import { builder } from '../util'
 
 export default defineMock({
   url: '/api/prose',

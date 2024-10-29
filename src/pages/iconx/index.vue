@@ -10,9 +10,7 @@ definePage({
 </script>
 
 <template>
-  <Container>
-    <div class="pt-8">
-      <var-icon namespace="i" name="border-radius" />
-    </div>
-  </Container>
+  <div class="pt-8">
+    <var-icon namespace="i" name="border-radius" />
+  </div>
 </template>

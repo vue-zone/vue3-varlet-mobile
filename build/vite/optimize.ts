@@ -17,4 +17,4 @@ const exclude = [
   '@iconify-json/carbon',
 ]
 
-export { include, exclude }
+export { exclude, include }

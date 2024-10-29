@@ -21,29 +21,27 @@ function pull() {
 </script>
 
 <template>
-  <Container>
-    <div class="data-label">
-      {{ $t('mock.fromAsyncData') }}
-    </div>
+  <div class="data-label">
+    {{ $t('mock.fromAsyncData') }}
+  </div>
 
-    <div class="data-content bg-white dark:bg-[--van-background-2]">
-      <div v-if="messages">
-        {{ messages }}
-      </div>
-      <div v-else class="text-center color-#969799">
-        {{ $t('mock.noData') }}
-      </div>
+  <div class="data-content bg-white dark:bg-[--van-background-2]">
+    <div v-if="messages">
+      {{ messages }}
     </div>
+    <div v-else class="text-center color-#969799">
+      {{ $t('mock.noData') }}
+    </div>
+  </div>
 
-    <var-space class="m-10" direction="column">
-      <var-button type="primary" block @click="pull">
-        {{ $t('mock.pull') }}
-      </var-button>
-      <var-button type="default" block @click="messages = ''">
-        {{ $t('mock.reset') }}
-      </var-button>
-    </var-space>
-  </Container>
+  <var-space class="m-10" direction="column">
+    <var-button type="primary" block @click="pull">
+      {{ $t('mock.pull') }}
+    </var-button>
+    <var-button type="default" block @click="messages = ''">
+      {{ $t('mock.reset') }}
+    </var-button>
+  </var-space>
 </template>
 
 <style lang="less" scoped>
