@@ -51,7 +51,6 @@ export function createVitePlugins() {
       ],
       imports: [
         'vue',
-        'vitest',
         '@vueuse/core',
         VueRouterAutoImports,
         {
