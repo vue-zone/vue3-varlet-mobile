@@ -14,7 +14,7 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to: EnhancedRouteLocation, from, next) => {
+router.beforeEach((to: EnhancedRouteLocation, _from, next) => {
   NProgress.start()
 
   const routeCacheStore = useRouteCacheStore()

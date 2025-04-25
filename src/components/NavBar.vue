@@ -24,11 +24,13 @@ const showLeftArrow = computed(() => routeWhiteList.includes(route.name as strin
 </script>
 
 <template>
-  <var-app-bar v-show="title" :title="title" title-position="center" :fixed="true" :safe-area-top="true" :placeholder="true">
-    <template #left>
-      <var-button v-if="!showLeftArrow" color="transparent" text-color="#fff" round text @click="onBack">
-        <var-icon name="chevron-left" :size="24" />
-      </var-button>
-    </template>
-  </var-app-bar>
+  <div v-if="title">
+    <var-app-bar :title="title" title-position="center" :fixed="true" :safe-area-top="true" :placeholder="true">
+      <template #left>
+        <var-button v-if="!showLeftArrow" color="transparent" text-color="#fff" round text @click="onBack">
+          <var-icon name="chevron-left" :size="24" />
+        </var-button>
+      </template>
+    </var-app-bar>
+  </div>
 </template>

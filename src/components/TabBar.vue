@@ -20,7 +20,7 @@ function change(e: string) {
 </script>
 
 <template>
-  <div v-show="display">
+  <div v-if="display">
     <var-bottom-navigation v-model:active="active" :fixed="true" :safe-area="true" @change="change(active)">
       <var-bottom-navigation-item name="/" :label="t('layouts.home')" icon="home" />
       <var-bottom-navigation-item name="profile" :label="t('layouts.profile')" icon="account-circle" />
