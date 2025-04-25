@@ -23,7 +23,7 @@ export function createVitePlugins() {
     VueRouter({
       extensions: ['.vue'],
       routesFolder: 'src/pages',
-      dts: 'src/typed-router.d.ts',
+      dts: 'src/types/typed-router.d.ts',
     }),
 
     vue(),
@@ -39,7 +39,7 @@ export function createVitePlugins() {
       extensions: ['vue'],
       resolvers: [VarletImportResolver()],
       include: [/\.vue$/, /\.vue\?vue/],
-      dts: 'src/components.d.ts',
+      dts: 'src/types/components.d.ts',
     }),
 
     // https://github.com/antfu/unplugin-auto-import
@@ -60,7 +60,7 @@ export function createVitePlugins() {
         },
         unheadVueComposablesImports,
       ],
-      dts: 'src/auto-imports.d.ts',
+      dts: 'src/types/auto-imports.d.ts',
       dirs: [
         'src/composables',
       ],
