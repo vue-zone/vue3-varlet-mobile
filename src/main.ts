@@ -2,7 +2,7 @@ import App from '@/App.vue'
 import router from '@/router'
 import pinia from '@/stores'
 import { i18n } from '@/utils/i18n'
-import { createHead } from '@unhead/vue'
+import { createHead } from '@unhead/vue/client'
 import { createApp } from 'vue'
 
 import '@/styles/app.less'
