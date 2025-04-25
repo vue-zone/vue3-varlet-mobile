@@ -15,7 +15,8 @@
     "persistPiniaState": "🍍 Persistent Pinia state",
     "unocssExample": "🎨 Unocss example",
     "keepAlive": "🧡 KeepAlive Demo",
-    "iconx": "🎉 Iconx example"
+    "iconx": "🎉 Iconx example",
+    "profile": "👤 Profile"
   },
   "mock": {
     "fromAsyncData": "Data from asynchronous requests",
