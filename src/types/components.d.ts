@@ -19,6 +19,7 @@ declare module 'vue' {
     VarBottomNavigationItem: typeof import('@varlet/ui')['_BottomNavigationItemComponent']
     VarButton: typeof import('@varlet/ui')['_ButtonComponent']
     VarCell: typeof import('@varlet/ui')['_CellComponent']
+    VarCounter: typeof import('@varlet/ui')['_CounterComponent']
     VarIcon: typeof import('@varlet/ui')['_IconComponent']
     VarPaper: typeof import('@varlet/ui')['_PaperComponent']
     VarResult: typeof import('@varlet/ui')['_ResultComponent']

@@ -3,17 +3,7 @@ defineOptions({
   name: 'Keepalive',
 })
 
-definePage({
-  name: 'Keepalive',
-  meta: {
-    level: 2,
-    title: '🧡 KeepAlive',
-    i18n: 'home.keepAlive',
-    keepAlive: true,
-  },
-})
-
-const value = ref(10)
+const value = ref(0)
 </script>
 
 <template>
@@ -23,3 +13,14 @@ const value = ref(10)
 
   <var-counter v-model="value" />
 </template>
+
+<route lang="json5">
+  {
+    name: 'Keepalive',
+    meta: {
+      title: '🧡 KeepAlive',
+      i18n: 'menus.keepAlive',
+      keepAlive: true,
+    },
+  }
+</route>

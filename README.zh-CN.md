@@ -110,12 +110,15 @@ An mobile web apps template based on the Vue 3 ecosystem.
 - [pnpm](https://pnpm.js.org/) - 快, 节省磁盘空间的包管理器
 - [Netlify](https://www.netlify.com/) - 零配置的部署
 - [VS Code Extensions](./.vscode/extensions.json)
-  - [Vite](https://marketplace.visualstudio.com/items?itemName=antfu.vite) - 自动启动 Vite 服务器
   - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - Vue 3 `<script setup>` IDE 支持
+  - [Unocss](https://marketplace.visualstudio.com/items?itemName=antfu.unocss) - Unocss 智能提示
+  - [Goto Alias](https://marketplace.visualstudio.com/items?itemName=antfu.goto-alias) - 跳转到定义
   - [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) - 图标内联显示和自动补全
+  - [File Nesting](https://marketplace.visualstudio.com/items?itemName=antfu.file-nesting) - 文件嵌套
   - [i18n Ally](https://marketplace.visualstudio.com/items?itemName=lokalise.i18n-ally) - 多合一的 I18n 支持
-  - [Varlet](https://varlet.pages.dev/#/zh-CN/extension) - 支持全组件的语法提示、快速补全
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [Varlet](https://varlet.pages.dev/#/zh-CN/extension) - 支持全组件的语法提示、快速补全
+  - [Better JSON5](https://marketplace.visualstudio.com/items?itemName=blueglassblock.better-json5) - JSON5 支持
 
 ## 现在可以试试
 

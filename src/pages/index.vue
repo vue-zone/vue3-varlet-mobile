@@ -2,15 +2,6 @@
 import useAppStore from '@/stores/modules/app'
 import { languageColumns, locale } from '@/utils/i18n'
 
-definePage({
-  name: 'home',
-  meta: {
-    level: 1,
-    title: '🎨 Unocss 示例',
-    i18n: 'home.home',
-  },
-})
-
 const appStore = useAppStore()
 const checked = ref<boolean>(isDark.value)
 
@@ -47,27 +38,27 @@ async function languagePicker() {
 }
 
 const menus = computed(() => ([
-  { title: t('home.mockGuide'), router: 'mock' },
-  { title: t('home.echartsDemo'), router: 'charts' },
-  { title: t('home.persistPiniaState'), router: 'counter' },
-  { title: t('home.unocssExample'), router: 'unocss' },
-  { title: t('home.keepAlive'), router: 'keepalive' },
-  { title: t('home.iconx'), router: 'iconx' },
-  { title: t('home.404Demo'), router: 'unknown' },
+  { title: t('menus.mockGuide'), router: 'mock' },
+  { title: t('menus.echartsDemo'), router: 'charts' },
+  { title: t('menus.persistPiniaState'), router: 'counter' },
+  { title: t('menus.unocssExample'), router: 'unocss' },
+  { title: t('menus.keepAlive'), router: 'keepalive' },
+  { title: t('menus.iconx'), router: 'iconx' },
+  { title: t('menus.404Demo'), router: 'unknown' },
 ]))
 </script>
 
 <template>
   <var-paper radius="10" :elevation="2">
     <var-cell border>
-      {{ t('home.darkMode') }}
+      {{ t('menus.darkMode') }}
       <template #extra>
         <var-switch v-model="checked" @click="toggle" />
       </template>
     </var-cell>
 
     <var-cell ripple border @click="languagePicker">
-      {{ t('home.language') }}
+      {{ t('menus.language') }}
       <template #extra>
         <div class="w-80 flex items-center justify-right">
           <span>{{ language }}</span>
@@ -90,3 +81,13 @@ const menus = computed(() => ([
     </var-cell>
   </var-paper>
 </template>
+
+<route lang="json5">
+  {
+    name: 'home',
+    meta: {
+      title: '主页',
+      i18n: 'menus.home'
+    },
+  }
+</route>

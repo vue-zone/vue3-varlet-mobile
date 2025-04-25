@@ -1,11 +1,4 @@
 <script setup lang="ts">
-definePage({
-  name: 'profile',
-  meta: {
-    level: 1,
-  },
-})
-
 const { t } = useI18n()
 </script>
 
@@ -14,3 +7,13 @@ const { t } = useI18n()
     {{ t('profile.placeholder') }}
   </div>
 </template>
+
+<route lang="json5">
+  {
+    name: 'profile',
+    meta: {
+      title: '👤 个人中心',
+      i18n: 'menus.profile',
+    },
+  }
+</route>

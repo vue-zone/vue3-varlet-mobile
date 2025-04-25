@@ -1,14 +1,3 @@
-<script setup lang="ts">
-definePage({
-  name: 'unocss',
-  meta: {
-    level: 2,
-    title: '🎨 Unocss 示例',
-    i18n: 'home.unocssExample',
-  },
-})
-</script>
-
 <template>
   <h1 class="text-6xl color-pink font-semibold">
     Hello, Unocss!
@@ -18,3 +7,13 @@ definePage({
     This is a simple example of Unocss.
   </p>
 </template>
+
+<route lang="json5">
+  {
+    name: 'unocss',
+    meta: {
+      title: '🎨 Unocss 示例',
+      i18n: 'menus.unocssExample',
+    },
+  }
+</route>

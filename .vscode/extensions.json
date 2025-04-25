@@ -1,10 +1,13 @@
 {
   "recommendations": [
     "Vue.volar",
-    "antfu.unocss",
-    "simonhe.common-intellisense",
     "lokalise.i18n-ally",
+    "antfu.unocss",
     "antfu.iconify",
-    "haoziqaq.varlet-vscode-extension"
+    "antfu.goto-alias",
+    "antfu.file-nesting",
+    "haoziqaq.varlet-vscode-extension",
+    "blueglassblock.better-json5",
+    "dbaeumer.vscode-eslint"
   ]
 }
