@@ -9,7 +9,7 @@ export interface AppStore {
 
 const prefersDark
   = window.matchMedia
-  && window.matchMedia('(prefers-color-scheme: dark)').matches
+    && window.matchMedia('(prefers-color-scheme: dark)').matches
 
 const locaApp = localStorage.getItem('app') ? JSON.parse(localStorage.getItem('app')) : ''
 
