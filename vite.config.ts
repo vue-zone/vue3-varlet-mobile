@@ -1,8 +1,6 @@
 import type { ConfigEnv, UserConfig } from 'vite'
 import path from 'node:path'
 import process from 'node:process'
-import autoprefixer from 'autoprefixer'
-import viewport from 'postcss-mobile-forever'
 import { loadEnv } from 'vite'
 import { createVitePlugins } from './build/vite'
 import { exclude, include } from './build/vite/optimize'
@@ -29,24 +27,8 @@ export default ({ mode }: ConfigEnv): UserConfig => {
 
     resolve: {
       alias: {
-        '~@': path.join(__dirname, './src'),
         '@': path.join(__dirname, './src'),
         '~': path.join(__dirname, './src/assets'),
-      },
-    },
-
-    css: {
-      postcss: {
-        plugins: [
-          autoprefixer(),
-          // https://github.com/wswmsword/postcss-mobile-forever
-          viewport({
-            unitPrecision: 6,
-            viewportWidth: 375,
-            mobileUnit: 'vmin',
-            exclude: /vue-devtools/,
-          }),
-        ],
       },
     },
 
