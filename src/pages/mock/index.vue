@@ -20,7 +20,7 @@ function pull() {
     <div v-if="messages">
       {{ messages }}
     </div>
-    <div v-else class="text-center color-#969799">
+    <div v-else class="color-#969799 text-center">
       {{ $t('mock.noData') }}
     </div>
   </div>

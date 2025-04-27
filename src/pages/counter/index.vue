@@ -15,16 +15,16 @@ function add() {
     Hello, Pinia!
   </h1>
 
-  <p class="mt-4 text-gray-700 dark:text-white">
+  <p class="text-gray-700 mt-10 dark:text-white">
     This is a simple example of persisting Pinia state.
     To verify its effectiveness, you can refresh the interface and observe it.
   </p>
 
-  <p class="mt-4">
+  <p class="mt-10">
     number：<strong class="text-green-500"> {{ counter }} </strong>
   </p>
 
-  <var-button type="primary" @click="add">
+  <var-button type="primary" class="mt-10" @click="add">
     Add
   </var-button>
 </template>

@@ -60,7 +60,7 @@ const menus = computed(() => ([
     <var-cell ripple border @click="languagePicker">
       {{ t('menus.language') }}
       <template #extra>
-        <div class="w-80 flex items-center justify-right">
+        <div class="flex w-80 items-center justify-right">
           <span>{{ language }}</span>
           <var-icon name="chevron-right" />
         </div>

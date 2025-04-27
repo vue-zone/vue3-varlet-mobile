@@ -5,9 +5,9 @@ const isMobile = ref(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera M
 <template>
   <slot v-if="isMobile" />
 
-  <div v-else class="min-h-screen flex flex-col items-center justify-center px-[14px]">
+  <div v-else class="px-[14px] flex flex-col min-h-screen items-center justify-center">
     <var-result
-      class="max-w-[350px] bg-transparent"
+      class="bg-transparent max-w-[350px]"
       type="warning"
       :title="$t('app.warning')"
       :description="$t('app.pleaseUseMobileVisit')"

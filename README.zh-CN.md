@@ -73,8 +73,6 @@ An mobile web apps template based on the Vue 3 ecosystem.
 ### UI 框架
 
 - [UnoCSS](https://github.com/antfu/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
-  - [`@unocss/preset-rem-to-px`](https://github.com/unocss/unocss/tree/main/packages/preset-rem-to-px) - 将所有实用程序的 rem 转换为 px
-  - [`eslint-plugin-unocss`](https://github.com/devunt/eslint-plugin-unocss) - Unocss 的 ESLint 插件
 - [Varlet](https://github.com/varletjs/varlet) - 基于 Vue3 开发的 Material 风格移动端组件库
   - [`@varlet/touch-emulator`](https://github.com/varletjs/varlet/tree/dev/packages/varlet-touch-emulator) - 在桌面端上模拟移动端 touch 事件
   - [`@varlet/preset-unocss`](https://github.com/varletjs/varlet/tree/dev/packages/varlet-preset-unocss) - 原子化 CSS 支持
@@ -95,7 +93,7 @@ An mobile web apps template based on the Vue 3 ecosystem.
 - [postcss-mobile-forever](https://github.com/wswmsword/postcss-mobile-forever) - 一款 PostCSS 插件，将固定尺寸的移动端视图转为具有最大宽度的可伸缩的移动端视图
 - [vite-plugin-vue-devtools](https://github.com/vuejs/devtools-next) - 旨在增强Vue开发者体验的Vite插件
 - [vueuse](https://github.com/antfu/vueuse) - 实用的 Composition API 工具合集
-- [@unhead/vue](https://github.com/unjs/unhead) - 响应式地操作文档头信息
+- [@unhead/vue v2](https://github.com/unjs/unhead) - 响应式地操作文档头信息
 - [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa) - PWA
 - [vite-plugin-sitemap](https://github.com/jbaubree/vite-plugin-sitemap) - sitemap 和 robots 生成器
 

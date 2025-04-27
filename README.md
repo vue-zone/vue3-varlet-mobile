@@ -73,8 +73,6 @@ An mobile web apps template based on the Vue 3 ecosystem.
 ### UI Frameworks
 
 - [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine
-  - [`@unocss/preset-rem-to-px`](https://github.com/unocss/unocss/tree/main/packages/preset-rem-to-px) - Converts rem to px for all utilities
-  - [`eslint-plugin-unocss`](https://github.com/devunt/eslint-plugin-unocss) - ESLint plugin for UnoCSS
 - [Varlet](https://github.com/varletjs/varlet) - Material design mobile component library developed based on Vue3
   - [`@varlet/touch-emulator`](https://github.com/varletjs/varlet/tree/dev/packages/varlet-touch-emulator) - Simulate mobile touch events on the desktop
   - [`@varlet/preset-unocss`](https://github.com/varletjs/varlet/tree/dev/packages/varlet-preset-unocss) - CSS atomic framework presets
@@ -95,7 +93,7 @@ An mobile web apps template based on the Vue 3 ecosystem.
 - [postcss-mobile-forever](https://github.com/wswmsword/postcss-mobile-forever) - To adapt different displays by one mobile viewport
 - [vite-plugin-vue-devtools](https://github.com/vuejs/devtools-next) - Designed to enhance the Vue developer experience
 - [vueuse](https://github.com/antfu/vueuse) - collection of useful composition APIs
-- [@unhead/vue](https://github.com/unjs/unhead) - manipulate document head reactively
+- [@unhead/vue v2](https://github.com/unjs/unhead) - manipulate document head reactively
 - [vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa) - PWA
 - [vite-plugin-sitemap](https://github.com/jbaubree/vite-plugin-sitemap) - sitemap and robots generator
 

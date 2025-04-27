@@ -7,7 +7,7 @@ const value = ref(0)
 </script>
 
 <template>
-  <p>
+  <p class="mb-10">
     {{ $t('keepAlive.label') }}
   </p>
 

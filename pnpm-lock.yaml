@@ -62,7 +62,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: 4.12.0
-        version: 4.12.0(@typescript-eslint/utils@8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(@unocss/eslint-plugin@66.1.0-beta.12(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.1)(jiti@2.4.2)(less@4.3.0)(terser@5.39.0)(yaml@2.7.1))
+        version: 4.12.0(@typescript-eslint/utils@8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.1)(jiti@2.4.2)(less@4.3.0)(terser@5.39.0)(yaml@2.7.1))
       '@commitlint/cli':
         specifier: ^19.8.0
         version: 19.8.0(@types/node@22.15.1)(typescript@5.8.3)
@@ -90,12 +90,9 @@ importers:
       '@types/store':
         specifier: ^2.0.5
         version: 2.0.5
-      '@unocss/eslint-plugin':
+      '@unocss/eslint-config':
         specifier: 66.1.0-beta.12
         version: 66.1.0-beta.12(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
-      '@unocss/preset-rem-to-px':
-        specifier: 66.1.0-beta.12
-        version: 66.1.0-beta.12
       '@varlet/import-resolver':
         specifier: ^3.10.5
         version: 3.10.5
@@ -1687,6 +1684,10 @@ packages:
   '@unocss/core@66.1.0-beta.12':
     resolution: {integrity: sha512-8+KJAoqA7eHC5cBJtod1AqWqQbYKfhTvQEgVQzZJ2sTYNTuQz4qdzPhUgKF83wURUhznGkdDL1Jxc6YITB1KPg==}
 
+  '@unocss/eslint-config@66.1.0-beta.12':
+    resolution: {integrity: sha512-ZlgDEDKL+fkbetwKYbg5vov5CwbAswMPC9bqaS0PeNtU2dlRdID6J1z/7qgXlYBDlJ4JNv/GYLLvRmDxTMmMuQ==}
+    engines: {node: '>=14'}
+
   '@unocss/eslint-plugin@66.1.0-beta.12':
     resolution: {integrity: sha512-aGc8X1SsAREsbFDBGDNOGr7pL0HOX0E4P2xua/Xd4DOMZKF8AhoQk+V4G9Zd/4s0bRkyVA78JO3vgOvmfVyxJQ==}
     engines: {node: '>=14'}
@@ -1711,9 +1712,6 @@ packages:
 
   '@unocss/preset-mini@66.1.0-beta.12':
     resolution: {integrity: sha512-acnKtLmUX+imhc5RXS7z4InMbt0p1nShU/Lxr5yz4FtL8YaDMNk8SNTE4oCk1P7OQJVNsGdDCFtrhYWi9qAa1A==}
-
-  '@unocss/preset-rem-to-px@66.1.0-beta.12':
-    resolution: {integrity: sha512-Yw5QNssffGdeRfkL93RB/SIoJw0m0iVlc7AMp1bVlJ8U3Bra8mc7BIOxFw6tFhm9+4zZ1Ol8+6RIqWwOPLVbeg==}
 
   '@unocss/preset-tagify@66.1.0-beta.12':
     resolution: {integrity: sha512-dhhiT8rpf8a5hrRYoIfV8X4KOs0Nugz15LIxJrv87zUZcWhMXA0Flla1IfgZ937ULIcqBBqZdQEYfVG0vc3FIw==}
@@ -5320,7 +5318,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@antfu/eslint-config@4.12.0(@typescript-eslint/utils@8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(@unocss/eslint-plugin@66.1.0-beta.12(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.1)(jiti@2.4.2)(less@4.3.0)(terser@5.39.0)(yaml@2.7.1))':
+  '@antfu/eslint-config@4.12.0(@typescript-eslint/utils@8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.25.1(jiti@2.4.2)))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.1)(jiti@2.4.2)(less@4.3.0)(terser@5.39.0)(yaml@2.7.1))':
     dependencies:
       '@antfu/install-pkg': 1.0.0
       '@clack/prompts': 0.10.1
@@ -5360,7 +5358,6 @@ snapshots:
       vue-eslint-parser: 10.1.3(eslint@9.25.1(jiti@2.4.2))
       yaml-eslint-parser: 1.3.0
     optionalDependencies:
-      '@unocss/eslint-plugin': 66.1.0-beta.12(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       eslint-plugin-format: 1.0.1(eslint@9.25.1(jiti@2.4.2))
     transitivePeerDependencies:
       - '@eslint/json'
@@ -6928,6 +6925,14 @@ snapshots:
 
   '@unocss/core@66.1.0-beta.12': {}
 
+  '@unocss/eslint-config@66.1.0-beta.12(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)':
+    dependencies:
+      '@unocss/eslint-plugin': 66.1.0-beta.12(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
+
   '@unocss/eslint-plugin@66.1.0-beta.12(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@typescript-eslint/utils': 8.31.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
@@ -6982,10 +6987,6 @@ snapshots:
       '@unocss/core': 66.1.0-beta.12
       '@unocss/extractor-arbitrary-variants': 66.1.0-beta.12
       '@unocss/rule-utils': 66.1.0-beta.12
-
-  '@unocss/preset-rem-to-px@66.1.0-beta.12':
-    dependencies:
-      '@unocss/core': 66.1.0-beta.12
 
   '@unocss/preset-tagify@66.1.0-beta.12':
     dependencies:

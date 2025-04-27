@@ -3,7 +3,7 @@
     Hello, Unocss!
   </h1>
 
-  <p class="mt-4 text-[var(--color-primary)] dark:text-white">
+  <p class="text-[var(--color-primary)] mt-4 dark:text-white">
     This is a simple example of Unocss.
   </p>
 </template>
