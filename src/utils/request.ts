@@ -1,6 +1,5 @@
 import type { AxiosError, InternalAxiosRequestConfig } from 'axios'
 import { STORAGE_TOKEN_KEY } from '@/stores/mutation-type'
-import { localStorage } from '@/utils/local-storage'
 import { Snackbar } from '@varlet/ui'
 import axios from 'axios'
 
@@ -42,7 +41,7 @@ function errorHandler(error: RequestError): Promise<any> {
 
 // Request interceptor
 function requestHandler(config: InternalAxiosRequestConfig): InternalAxiosRequestConfig | Promise<InternalAxiosRequestConfig> {
-  const savedToken = localStorage.get(STORAGE_TOKEN_KEY)
+  const savedToken = localStorage.getItem(STORAGE_TOKEN_KEY)
   // If the token exists
   // Let each request carry a custom token, please modify it according to the actual situation.
   if (savedToken)

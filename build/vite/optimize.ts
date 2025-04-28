@@ -1,10 +1,8 @@
 const include = [
   'axios',
-  'store',
   'echarts',
   'lodash-es',
   'resize-detector',
-  'store/plugins/expire',
   '@varlet/ui/es/paper/style/index.mjs',
   '@varlet/ui/es/cell/style/index.mjs',
   '@varlet/ui/es/switch/style/index.mjs',
