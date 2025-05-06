@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import useAutoThemeSwitcher from '@/hooks/useAutoThemeSwitcher'
-import useAppStore from '@/stores/modules/app'
 import useRouteCache from '@/stores/modules/routeCache'
 
 useHead({
@@ -24,16 +22,8 @@ useHead({
   ],
 })
 
-const appStore = useAppStore()
-
-const { initializeThemeSwitcher } = useAutoThemeSwitcher(appStore)
-
 const keepAliveRouteNames = computed(() => {
   return useRouteCache().routeCaches as string[]
-})
-
-onMounted(() => {
-  initializeThemeSwitcher()
 })
 </script>
 

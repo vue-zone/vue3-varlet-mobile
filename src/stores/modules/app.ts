@@ -7,22 +7,13 @@ export interface AppStore {
   setTabBarActive: (val: string) => void
 }
 
-const prefersDark
-  = window.matchMedia
-    && window.matchMedia('(prefers-color-scheme: dark)').matches
-
 const locaApp = localStorage.getItem('app') ? JSON.parse(localStorage.getItem('app')) : ''
 
 const useAppStore = defineStore('app', () => {
-  const theme = prefersDark ? 'dark' : 'light'
-  const mode = ref(theme)
-
-  const switchMode = (val: string) => {
-    const rootStyleVars = val === 'light' ? lightTheme : darkTheme
+  watchEffect(() => {
+    const rootStyleVars = isDark.value ? darkTheme : lightTheme
     StyleProvider(rootStyleVars)
-
-    mode.value = val
-  }
+  })
 
   const tabBarActive = ref(locaApp.tabBarActive || '/')
 
@@ -31,8 +22,6 @@ const useAppStore = defineStore('app', () => {
   }
 
   return {
-    mode,
-    switchMode,
     tabBarActive,
     setTabBarActive,
   }

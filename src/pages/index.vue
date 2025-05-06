@@ -1,25 +1,19 @@
 <script setup lang="ts">
-import useAppStore from '@/stores/modules/app'
 import { languageColumns, locale } from '@/utils/i18n'
-
-const appStore = useAppStore()
-const checked = ref<boolean>(isDark.value)
-
-watch(
-  () => isDark.value,
-  (newMode) => {
-    checked.value = newMode
-  },
-  { immediate: true },
-)
-
-function toggle() {
-  toggleDark()
-  appStore.switchMode(isDark.value ? 'dark' : 'light')
-}
 
 const { t } = useI18n()
 
+const menus = computed(() => ([
+  { title: t('menus.mockGuide'), router: 'mock' },
+  { title: t('menus.echartsDemo'), router: 'charts' },
+  { title: t('menus.persistPiniaState'), router: 'counter' },
+  { title: t('menus.unocssExample'), router: 'unocss' },
+  { title: t('menus.keepAlive'), router: 'keepalive' },
+  { title: t('menus.iconx'), router: 'iconx' },
+  { title: t('menus.404Demo'), router: 'unknown' },
+]))
+
+const checked = computed<boolean>(() => isDark.value)
 const language = computed(() => languageColumns.find(l => l.value === locale.value).text)
 
 async function languagePicker() {
@@ -37,15 +31,9 @@ async function languagePicker() {
   })
 }
 
-const menus = computed(() => ([
-  { title: t('menus.mockGuide'), router: 'mock' },
-  { title: t('menus.echartsDemo'), router: 'charts' },
-  { title: t('menus.persistPiniaState'), router: 'counter' },
-  { title: t('menus.unocssExample'), router: 'unocss' },
-  { title: t('menus.keepAlive'), router: 'keepalive' },
-  { title: t('menus.iconx'), router: 'iconx' },
-  { title: t('menus.404Demo'), router: 'unknown' },
-]))
+function toggle() {
+  toggleDark()
+}
 </script>
 
 <template>
@@ -53,7 +41,7 @@ const menus = computed(() => ([
     <var-cell border>
       {{ t('menus.darkMode') }}
       <template #extra>
-        <var-switch v-model="checked" @click="toggle" />
+        <var-switch v-model="checked" @change="toggle" />
       </template>
     </var-cell>
 
