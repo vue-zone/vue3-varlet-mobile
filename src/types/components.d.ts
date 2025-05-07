@@ -15,15 +15,20 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     TabBar: typeof import('./../components/TabBar.vue')['default']
     VarAppBar: typeof import('@varlet/ui')['_AppBarComponent']
+    VarAvatar: typeof import('@varlet/ui')['_AvatarComponent']
     VarBottomNavigation: typeof import('@varlet/ui')['_BottomNavigationComponent']
     VarBottomNavigationItem: typeof import('@varlet/ui')['_BottomNavigationItemComponent']
     VarButton: typeof import('@varlet/ui')['_ButtonComponent']
     VarCell: typeof import('@varlet/ui')['_CellComponent']
     VarCounter: typeof import('@varlet/ui')['_CounterComponent']
     VarIcon: typeof import('@varlet/ui')['_IconComponent']
+    VarImage: typeof import('@varlet/ui')['_ImageComponent']
     VarPaper: typeof import('@varlet/ui')['_PaperComponent']
     VarResult: typeof import('@varlet/ui')['_ResultComponent']
     VarSpace: typeof import('@varlet/ui')['_SpaceComponent']
     VarSwitch: typeof import('@varlet/ui')['_SwitchComponent']
+  }
+  export interface ComponentCustomProperties {
+    vRipple: typeof import('@varlet/ui')['_RippleComponent']
   }
 }

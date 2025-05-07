@@ -3,7 +3,9 @@
     "pleaseUseMobileVisit": "Please use a mobile device to access",
     "warning": "WARNING",
     "notFound": "Not found",
-    "backBtn": "Back"
+    "backBtn": "Back",
+    "settings": "Settings",
+    "examples": "Examples"
   },
   "menus": {
     "home": "Home",
@@ -37,7 +39,9 @@
     "profile": "PROFILE"
   },
   "profile": {
-    "placeholder": "WIP"
+    "login": "Login",
+    "settings": "Settings",
+    "docs": "Docs"
   },
   "keepAlive": {
     "label": "The current component will be cached"

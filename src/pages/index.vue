@@ -13,7 +13,11 @@ const menus = computed(() => ([
   { title: t('menus.404Demo'), router: 'unknown' },
 ]))
 
-const checked = computed<boolean>(() => isDark.value)
+const checked = computed({
+  get: () => isDark.value,
+  set: () => toggleDark(),
+})
+
 const language = computed(() => languageColumns.find(l => l.value === locale.value).text)
 
 async function languagePicker() {
@@ -30,44 +34,52 @@ async function languagePicker() {
     },
   })
 }
-
-function toggle() {
-  toggleDark()
-}
 </script>
 
 <template>
-  <var-paper radius="10" :elevation="2">
-    <var-cell border>
-      {{ t('menus.darkMode') }}
-      <template #extra>
-        <var-switch v-model="checked" @change="toggle" />
-      </template>
-    </var-cell>
+  <div class="space-y-16">
+    <div class="text-15 text-gray-400">
+      {{ t('app.settings') }}
+    </div>
 
-    <var-cell ripple border @click="languagePicker">
-      {{ t('menus.language') }}
-      <template #extra>
-        <div class="flex w-80 items-center justify-right">
-          <span>{{ language }}</span>
+    <var-paper radius="10" :elevation="2">
+      <var-cell border>
+        {{ t('menus.darkMode') }}
+        <template #extra>
+          <var-switch v-model="checked" />
+        </template>
+      </var-cell>
+
+      <var-cell ripple @click="languagePicker">
+        {{ t('menus.language') }}
+        <template #extra>
+          <div class="flex w-80 items-center justify-right">
+            <span>{{ language }}</span>
+            <var-icon name="chevron-right" />
+          </div>
+        </template>
+      </var-cell>
+    </var-paper>
+
+    <div class="text-15 text-gray-400">
+      {{ t('app.examples') }}
+    </div>
+
+    <var-paper radius="10" :elevation="2">
+      <var-cell
+        v-for="(item, index) in menus"
+        :key="item.router"
+        :border="index !== menus.length - 1"
+        ripple
+        @click="$router.push(item.router)"
+      >
+        {{ item.title }}
+        <template #extra>
           <var-icon name="chevron-right" />
-        </div>
-      </template>
-    </var-cell>
-
-    <var-cell
-      v-for="(item, index) in menus"
-      :key="item.router"
-      :border="index !== menus.length - 1"
-      ripple
-      @click="$router.push(item.router)"
-    >
-      {{ item.title }}
-      <template #extra>
-        <var-icon name="chevron-right" />
-      </template>
-    </var-cell>
-  </var-paper>
+        </template>
+      </var-cell>
+    </var-paper>
+  </div>
 </template>
 
 <route lang="json5">

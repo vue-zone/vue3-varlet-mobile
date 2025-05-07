@@ -3,7 +3,9 @@
     "warning": "警告",
     "pleaseUseMobileVisit": "请使用移动设备访问",
     "notFound": "没有找到",
-    "backBtn": "返回"
+    "backBtn": "返回",
+    "settings": "设置",
+    "examples": "演示"
   },
   "menus": {
     "home": "主页",
@@ -37,7 +39,9 @@
     "profile": "我的"
   },
   "profile": {
-    "placeholder": "未完成"
+    "login": "登录",
+    "settings": "设置",
+    "docs": "文档"
   },
   "keepAlive": {
     "label": "当前组件将会被缓存"
