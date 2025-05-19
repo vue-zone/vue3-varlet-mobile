@@ -19,7 +19,7 @@ import defaultAvatar from '@/assets/images/default-avatar.svg'
   </var-paper>
 
   <var-paper radius="10" :elevation="2" class="mt-16">
-    <var-cell :title="$t('profile.settings')" ripple border>
+    <var-cell :title="$t('profile.settings')" ripple border @click="$router.push('/settings')">
       <template #icon>
         <div class="i-carbon:settings text-gray-400 mr-5 self-center" />
       </template>

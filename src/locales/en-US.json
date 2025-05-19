@@ -18,7 +18,8 @@
     "unocssExample": "🎨 Unocss example",
     "keepAlive": "🧡 KeepAlive Demo",
     "iconx": "🎉 Iconx example",
-    "profile": "👤 Profile"
+    "profile": "👤 Profile",
+    "settings": "Settings"
   },
   "mock": {
     "fromAsyncData": "Data from asynchronous requests",
@@ -45,5 +46,8 @@
   },
   "keepAlive": {
     "label": "The current component will be cached"
+  },
+  "settings": {
+    "currentVersion": "Current Version"
   }
 }

@@ -29,6 +29,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       alias: {
         '@': path.join(__dirname, './src'),
         '~': path.join(__dirname, './src/assets'),
+        '~root': path.join(__dirname, '.'),
       },
     },
 
