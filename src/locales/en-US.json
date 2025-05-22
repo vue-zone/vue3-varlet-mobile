@@ -19,7 +19,8 @@
     "keepAlive": "🧡 KeepAlive Demo",
     "iconx": "🎉 Iconx example",
     "profile": "👤 Profile",
-    "settings": "Settings"
+    "settings": "Settings",
+    "login": "🔒 Login"
   },
   "mock": {
     "fromAsyncData": "Data from asynchronous requests",
@@ -48,6 +49,18 @@
     "label": "The current component will be cached"
   },
   "settings": {
-    "currentVersion": "Current Version"
+    "logout": "Logout",
+    "currentVersion": "Current Version",
+    "comfirmTitle": "Confirm Logout?"
+  },
+  "login": {
+    "login": "Sign In",
+    "logout": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "emailFormatError": "Email format error",
+    "pleaseEnterPassword": "Please enter password",
+    "sign-up": "Click to sign up",
+    "forgot-password": "Forgot password?"
   }
 }

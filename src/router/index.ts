@@ -1,10 +1,10 @@
 import type { EnhancedRouteLocation } from './types'
-import useRouteCacheStore from '@/stores/modules/routeCache'
+import { useRouteCacheStore, useUserStore } from '@/stores'
 
 import NProgress from 'nprogress'
 import { createRouter, createWebHistory } from 'vue-router/auto'
 import { handleHotUpdate, routes } from 'vue-router/auto-routes'
-
+import { isLogin } from '@/utils/auth'
 import 'nprogress/nprogress.css'
 
 NProgress.configure({ showSpinner: true, parent: '#app' })
@@ -18,13 +18,17 @@ const router = createRouter({
 if (import.meta.hot)
   handleHotUpdate(router)
 
-router.beforeEach((to: EnhancedRouteLocation) => {
+router.beforeEach(async (to: EnhancedRouteLocation) => {
   NProgress.start()
 
   const routeCacheStore = useRouteCacheStore()
+  const userStore = useUserStore()
 
   // Route cache
   routeCacheStore.addRoute(to)
+
+  if (isLogin() && !userStore.userInfo?.uid)
+    await userStore.info()
 })
 
 router.afterEach(() => {

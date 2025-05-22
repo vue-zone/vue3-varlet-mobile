@@ -16,6 +16,7 @@ const include = [
   '@varlet/ui/es/button/style/index.mjs',
   '@varlet/ui/es/icon/style/index.mjs',
   '@varlet/ui/es/style-provider/style/index.mjs',
+  '@varlet/ui/es/dialog/style/index.mjs',
   'unplugin-vue-router/runtime',
   'unplugin-vue-router/data-loaders',
   'unplugin-vue-router/data-loaders/basic',

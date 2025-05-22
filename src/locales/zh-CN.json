@@ -19,7 +19,8 @@
     "keepAlive": "🧡 KeepAlive 演示",
     "iconx": "🎉 Iconx 示例",
     "profile": "👤 个人中心",
-    "settings": "设置"
+    "settings": "设置",
+    "login": "🔒 用户登录"
   },
   "mock": {
     "fromAsyncData": "来自异步请求的数据",
@@ -48,6 +49,18 @@
     "label": "当前组件将会被缓存"
   },
   "settings": {
-    "currentVersion": "当前版本"
+    "logout": "退出登录",
+    "currentVersion": "当前版本",
+    "comfirmTitle": "确认退出？"
+  },
+  "login": {
+    "login": "登录",
+    "logout": "退出",
+    "email": "邮箱",
+    "password": "密码",
+    "emailFormatError": "邮箱格式不正确",
+    "pleaseEnterPassword": "请输入密码",
+    "sign-up": "还没有账号？点击注册",
+    "forgot-password": "忘记密码？"
   }
 }

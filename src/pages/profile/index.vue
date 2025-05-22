@@ -1,18 +1,34 @@
 <script setup lang="ts">
+import { useUserStore } from '@/stores'
 import defaultAvatar from '@/assets/images/default-avatar.svg'
+
+const userStore = useUserStore()
+const userInfo = computed(() => userStore.userInfo)
+const isLogin = computed(() => !!userInfo.value.uid)
+
+const router = useRouter()
+const route = useRoute()
+
+function handleLogin() {
+  if (isLogin.value)
+    return
+
+  router.push({ path: '/login', query: { redirect: route.fullPath } })
+}
 </script>
 
 <template>
   <var-paper radius="10" :elevation="2">
-    <var-cell ripple>
+    <var-cell ripple @click="handleLogin">
       <template #icon>
-        <var-avatar :src="defaultAvatar" color="var(--color-body)" class="h-56 w-56" />
+        <var-avatar :src="userInfo.avatar || defaultAvatar" color="var(--color-body)" class="h-56 w-56" />
       </template>
 
       <template #extra>
         <div class="flex w-60 items-center justify-end">
-          <span class="text-15">{{ $t('profile.login') }}</span>
-          <var-icon name="chevron-right" size="26" />
+          <span v-if="isLogin">{{ userInfo.name }}</span>
+          <span v-else class="text-15">{{ $t('profile.login') }}</span>
+          <var-icon v-if="!isLogin" name="chevron-right" size="26" />
         </div>
       </template>
     </var-cell>
