@@ -182,7 +182,7 @@ pnpm build
 
 ## 捐赠 ☕
 
-[请我喝一杯咖啡](https://github.com/CharleeWa/sponsor)
+[请我喝一杯咖啡](https://github.com/cwandev/sponsor)
 
 <h2 align="center">💝 我们的赞助者 💝</h2>
 
@@ -205,7 +205,7 @@ pnpm build
 </p>
 
 <p align="center">
-<a href="https://github.com/CharleeWa"><img src="https://avatars.githubusercontent.com/u/22477554?v=4" width="60px" alt="CharleeWa" /></a>
+<a href="https://github.com/cwandev"><img src="https://avatars.githubusercontent.com/u/22477554?v=4" width="60px" alt="cwandev" /></a>
 <a href="https://github.com/ljt990218"><img src="https://avatars.githubusercontent.com/u/50509815?v=4" width="60px" alt="ljt990218" /></a>
 </p>
 
