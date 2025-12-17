@@ -1,3 +1,6 @@
+import presetRemToPx from '@unocss/preset-rem-to-px'
+
+import { presetVarlet } from '@varlet/preset-unocss'
 import {
   defineConfig,
   presetAttributify,
@@ -5,9 +8,6 @@ import {
   presetMini,
   presetUno,
 } from 'unocss'
-
-import { presetVarlet } from '@varlet/preset-unocss'
-import presetRemToPx from '@unocss/preset-rem-to-px'
 
 export default defineConfig({
   presets: [
